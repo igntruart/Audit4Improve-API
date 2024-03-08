@@ -11,7 +11,7 @@
 <link rel="stylesheet" type="text/css" href="script-dir/jquery-ui.min.css" title="Style">
 <link rel="stylesheet" type="text/css" href="jquery-ui.overrides.css" title="Style">
 <script type="text/javascript" src="script.js"></script>
-<script type="text/javascript" src="script-dir/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="script-dir/jquery-3.6.1.min.js"></script>
 <script type="text/javascript" src="script-dir/jquery-ui.min.js"></script>
 </head>
 <body class="all-classes-index-page">
@@ -82,11 +82,18 @@ loadScripts(document, 'script');</script>
 <div class="block">
  Interfaz con los aspectos comunes al manejo de ficheros</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="us/muit/fs/a4i/model/remote/GitHubEnquirer.html" title="class in us.muit.fs.a4i.model.remote">GitHubEnquirer</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab2">
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="us/muit/fs/a4i/model/entities/Font.html" title="class in us.muit.fs.a4i.model.entities">Font</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="us/muit/fs/a4i/model/remote/GitHubEnquirer.html" title="class in us.muit.fs.a4i.model.remote">GitHubEnquirer</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
 <div class="block">
  Clase abstracta con los métodos comunes a los constructores que recogen la
  información del servicio GitHub</div>
+</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="us/muit/fs/a4i/model/remote/GitHubOrganizationEnquirer.html" title="class in us.muit.fs.a4i.model.remote">GitHubOrganizationEnquirer</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab2">
+<div class="block">
+ Esta clase permite consultar métricas sobre una organización GitHub</div>
 </div>
 <div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="us/muit/fs/a4i/model/remote/GitHubRepositoryEnquirer.html" title="class in us.muit.fs.a4i.model.remote">GitHubRepositoryEnquirer</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
@@ -111,36 +118,42 @@ loadScripts(document, 'script');</script>
 <div class="block">
  Define los métodos para calcular cada indicador y añadirlo al informe</div>
 </div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="us/muit/fs/a4i/control/IndicatorStrategy.html" title="interface in us.muit.fs.a4i.control">IndicatorStrategy</a>&lt;<a href="us/muit/fs/a4i/control/IndicatorStrategy.html" title="type parameter in IndicatorStrategy">T</a>&gt;</div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
+<div class="block">/**</div>
+</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="us/muit/fs/a4i/control/IssuesRatioIndicatorStrategy.html" title="class in us.muit.fs.a4i.control">IssuesRatioIndicatorStrategy</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
 <div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="us/muit/fs/a4i/config/MetricConfiguration.html" title="class in us.muit.fs.a4i.config">MetricConfiguration</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
 <div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="us/muit/fs/a4i/config/MetricConfigurationI.html" title="interface in us.muit.fs.a4i.config">MetricConfigurationI</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab1">&nbsp;</div>
 <div class="col-first odd-row-color all-classes-table all-classes-table-tab5"><a href="us/muit/fs/a4i/exceptions/MetricException.html" title="class in us.muit.fs.a4i.exceptions">MetricException</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab5">&nbsp;</div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="us/muit/fs/a4i/persistence/PersistenceManager.html" title="interface in us.muit.fs.a4i.persistence">PersistenceManager</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
+<div class="col-first even-row-color all-classes-table all-classes-table-tab5"><a href="us/muit/fs/a4i/exceptions/NotAvailableMetricException.html" title="class in us.muit.fs.a4i.exceptions">NotAvailableMetricException</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab5">&nbsp;</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="us/muit/fs/a4i/persistence/PersistenceManager.html" title="interface in us.muit.fs.a4i.persistence">PersistenceManager</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
 <div class="block">
  Interfaz de los gestores de persistencia</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab3"><a href="us/muit/fs/a4i/persistence/PersistenceManager.PersistenceType.html" title="enum class in us.muit.fs.a4i.persistence">PersistenceManager.PersistenceType</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab3">&nbsp;</div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="us/muit/fs/a4i/model/remote/RemoteEnquirer.html" title="interface in us.muit.fs.a4i.model.remote">RemoteEnquirer</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
+<div class="col-first even-row-color all-classes-table all-classes-table-tab3"><a href="us/muit/fs/a4i/persistence/PersistenceManager.PersistenceType.html" title="enum class in us.muit.fs.a4i.persistence">PersistenceManager.PersistenceType</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab3">&nbsp;</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="us/muit/fs/a4i/model/remote/RemoteEnquirer.html" title="interface in us.muit.fs.a4i.model.remote">RemoteEnquirer</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
 <div class="block">
  Interfaz para desacoplar el mecanismo de obtención de métricas del servidor
  remoto que se use como fuente de las mismas</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab3"><a href="us/muit/fs/a4i/model/remote/RemoteEnquirer.RemoteType.html" title="enum class in us.muit.fs.a4i.model.remote">RemoteEnquirer.RemoteType</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab3">&nbsp;</div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="us/muit/fs/a4i/model/entities/Report.html" title="class in us.muit.fs.a4i.model.entities">Report</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab2">
+<div class="col-first even-row-color all-classes-table all-classes-table-tab3"><a href="us/muit/fs/a4i/model/remote/RemoteEnquirer.RemoteType.html" title="enum class in us.muit.fs.a4i.model.remote">RemoteEnquirer.RemoteType</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab3">&nbsp;</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="us/muit/fs/a4i/model/entities/Report.html" title="class in us.muit.fs.a4i.model.entities">Report</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
 <div class="block">
  Aspectos generales de todos los informes</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="us/muit/fs/a4i/persistence/ReportFormater.html" title="class in us.muit.fs.a4i.persistence">ReportFormater</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="us/muit/fs/a4i/control/ReportFormaterI.html" title="interface in us.muit.fs.a4i.control">ReportFormaterI</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab1">&nbsp;</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="us/muit/fs/a4i/persistence/ReportFormater.html" title="class in us.muit.fs.a4i.persistence">ReportFormater</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
 <div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="us/muit/fs/a4i/persistence/ReportFormaterI.html" title="interface in us.muit.fs.a4i.persistence">ReportFormaterI</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
 <div class="block">

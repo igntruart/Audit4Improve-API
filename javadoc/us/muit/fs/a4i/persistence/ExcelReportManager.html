@@ -11,7 +11,7 @@
 <link rel="stylesheet" type="text/css" href="../../../../../script-dir/jquery-ui.min.css" title="Style">
 <link rel="stylesheet" type="text/css" href="../../../../../jquery-ui.overrides.css" title="Style">
 <script type="text/javascript" src="../../../../../script.js"></script>
-<script type="text/javascript" src="../../../../../script-dir/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="../../../../../script-dir/jquery-3.6.1.min.js"></script>
 <script type="text/javascript" src="../../../../../script-dir/jquery-ui.min.js"></script>
 </head>
 <body class="class-declaration-page">
@@ -103,6 +103,9 @@ implements <a href="PersistenceManager.html" title="interface in us.muit.fs.a4i.
  <p>
  Si la hoja exist�a la recupera y se añadirá sobre ella, no se elimina lo
  anterior, si no existía se crea nueva
+ </p>
+ <p>
+ Deuda técnica. En la persistencia de métricas e indicadores se observa mucho código replicado, se debe optimizar
  </p></div>
 <dl class="notes">
 <dt>Author:</dt>
@@ -147,10 +150,10 @@ implements <a href="PersistenceManager.html" title="interface in us.muit.fs.a4i.
 <div class="block">
  Referencia al gestor de estilo que se va a utilizar</div>
 </div>
-<div class="col-first odd-row-color"><code>protected org.apache.poi.hssf.usermodel.HSSFSheet</code></div>
+<div class="col-first odd-row-color"><code>protected org.apache.poi.xssf.usermodel.XSSFSheet</code></div>
 <div class="col-second odd-row-color"><code><a href="#sheet" class="member-name-link">sheet</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code>protected org.apache.poi.hssf.usermodel.HSSFWorkbook</code></div>
+<div class="col-first even-row-color"><code>protected org.apache.poi.xssf.usermodel.XSSFWorkbook</code></div>
 <div class="col-second even-row-color"><code><a href="#wb" class="member-name-link">wb</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 </div>
@@ -166,6 +169,9 @@ implements <a href="PersistenceManager.html" title="interface in us.muit.fs.a4i.
 <div class="table-header col-last">Description</div>
 <div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E()" class="member-name-link">ExcelReportManager</a>()</code></div>
 <div class="col-last even-row-color">&nbsp;</div>
+<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(java.lang.String,java.lang.String)" class="member-name-link">ExcelReportManager</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;filePath,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;fileName)</code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
 </div>
 </section>
 </li>
@@ -186,19 +192,18 @@ implements <a href="PersistenceManager.html" title="interface in us.muit.fs.a4i.
 <div class="block">
  Borra el informe</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected org.apache.poi.hssf.usermodel.HSSFSheet</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCleanSheet()" class="member-name-link">getCleanSheet</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected org.apache.poi.xssf.usermodel.XSSFSheet</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCleanSheet(java.lang.String)" class="member-name-link">getCleanSheet</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;entityId)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
- El libro contendrán todos los informes de un tipo concreto Primero hay que
- abrir el libro Busco la hoja correspondiente a esta entidad, si ya existe la
- elimino Creo la hoja</div>
+ El libro contendrá todos los informes de un tipo concreto.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#saveReport(us.muit.fs.a4i.model.entities.ReportI)" class="member-name-link">saveReport</a><wbr>(<a href="../model/entities/ReportI.html" title="interface in us.muit.fs.a4i.model.entities">ReportI</a>&nbsp;report)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Guarda en un hoja limpia con el nombre del id del informe todas las métricas
- y los indicadores que incluya</div>
+<div class="block">Un informe será una hoja en el libro excel Guarda en un hoja limpia con el
+ nombre del id del informe Incluye todas las métricas y los indicadores que
+ tenga report</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setFormater(us.muit.fs.a4i.persistence.ReportFormaterI)" class="member-name-link">setFormater</a><wbr>(<a href="ReportFormaterI.html" title="interface in us.muit.fs.a4i.persistence">ReportFormaterI</a>&nbsp;formater)</code></div>
@@ -218,9 +223,6 @@ implements <a href="PersistenceManager.html" title="interface in us.muit.fs.a4i.
 <div class="block">
  Establece la localización del fichero</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setReport(us.muit.fs.a4i.model.entities.ReportI)" class="member-name-link">setReport</a><wbr>(<a href="../model/entities/ReportI.html" title="interface in us.muit.fs.a4i.model.entities">ReportI</a>&nbsp;report)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -268,13 +270,13 @@ implements <a href="PersistenceManager.html" title="interface in us.muit.fs.a4i.
 <li>
 <section class="detail" id="wb">
 <h3>wb</h3>
-<div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type">org.apache.poi.hssf.usermodel.HSSFWorkbook</span>&nbsp;<span class="element-name">wb</span></div>
+<div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type">org.apache.poi.xssf.usermodel.XSSFWorkbook</span>&nbsp;<span class="element-name">wb</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="sheet">
 <h3>sheet</h3>
-<div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type">org.apache.poi.hssf.usermodel.HSSFSheet</span>&nbsp;<span class="element-name">sheet</span></div>
+<div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type">org.apache.poi.xssf.usermodel.XSSFSheet</span>&nbsp;<span class="element-name">sheet</span></div>
 </section>
 </li>
 </ul>
@@ -285,6 +287,13 @@ implements <a href="PersistenceManager.html" title="interface in us.muit.fs.a4i.
 <section class="constructor-details" id="constructor-detail">
 <h2>Constructor Details</h2>
 <ul class="member-list">
+<li>
+<section class="detail" id="&lt;init&gt;(java.lang.String,java.lang.String)">
+<h3>ExcelReportManager</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">ExcelReportManager</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;filePath,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;fileName)</span></div>
+</section>
+</li>
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>ExcelReportManager</h3>
@@ -299,16 +308,6 @@ implements <a href="PersistenceManager.html" title="interface in us.muit.fs.a4i.
 <section class="method-details" id="method-detail">
 <h2>Method Details</h2>
 <ul class="member-list">
-<li>
-<section class="detail" id="setReport(us.muit.fs.a4i.model.entities.ReportI)">
-<h3>setReport</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setReport</span><wbr><span class="parameters">(<a href="../model/entities/ReportI.html" title="interface in us.muit.fs.a4i.model.entities">ReportI</a>&nbsp;report)</span></div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>report</code> - añade el informe</dd>
-</dl>
-</section>
-</li>
 <li>
 <section class="detail" id="setFormater(us.muit.fs.a4i.persistence.ReportFormaterI)">
 <h3>setFormater</h3>
@@ -358,15 +357,15 @@ implements <a href="PersistenceManager.html" title="interface in us.muit.fs.a4i.
 </section>
 </li>
 <li>
-<section class="detail" id="getCleanSheet()">
+<section class="detail" id="getCleanSheet(java.lang.String)">
 <h3>getCleanSheet</h3>
-<div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type">org.apache.poi.hssf.usermodel.HSSFSheet</span>&nbsp;<span class="element-name">getCleanSheet</span>()
+<div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type">org.apache.poi.xssf.usermodel.XSSFSheet</span>&nbsp;<span class="element-name">getCleanSheet</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;entityId)</span>
                                                          throws <span class="exceptions">org.apache.poi.EncryptedDocumentException,
 <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></span></div>
 <div class="block"><p>
- El libro contendrán todos los informes de un tipo concreto Primero hay que
- abrir el libro Busco la hoja correspondiente a esta entidad, si ya existe la
- elimino Creo la hoja
+ El libro contendrá todos los informes de un tipo concreto. Primero hay que
+ abrir el libro. Busco la hoja correspondiente a esta entidad, si ya existe la
+ elimino. Creo la hoja
  </p></div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -380,17 +379,15 @@ implements <a href="PersistenceManager.html" title="interface in us.muit.fs.a4i.
 <li>
 <section class="detail" id="saveReport(us.muit.fs.a4i.model.entities.ReportI)">
 <h3>saveReport</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">saveReport</span><wbr><span class="parameters">(<a href="../model/entities/ReportI.html" title="interface in us.muit.fs.a4i.model.entities">ReportI</a>&nbsp;report)</span>
-                throws <span class="exceptions"><a href="../exceptions/ReportNotDefinedException.html" title="class in us.muit.fs.a4i.exceptions">ReportNotDefinedException</a></span></div>
-<div class="block">Guarda en un hoja limpia con el nombre del id del informe todas las métricas
- y los indicadores que incluya</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">saveReport</span><wbr><span class="parameters">(<a href="../model/entities/ReportI.html" title="interface in us.muit.fs.a4i.model.entities">ReportI</a>&nbsp;report)</span></div>
+<div class="block">Un informe será una hoja en el libro excel Guarda en un hoja limpia con el
+ nombre del id del informe Incluye todas las métricas y los indicadores que
+ tenga report</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="PersistenceManager.html#saveReport(us.muit.fs.a4i.model.entities.ReportI)">saveReport</a></code>&nbsp;in interface&nbsp;<code><a href="PersistenceManager.html" title="interface in us.muit.fs.a4i.persistence">PersistenceManager</a></code></dd>
 <dt>Parameters:</dt>
 <dd><code>report</code> - informe a persistir</dd>
-<dt>Throws:</dt>
-<dd><code><a href="../exceptions/ReportNotDefinedException.html" title="class in us.muit.fs.a4i.exceptions">ReportNotDefinedException</a></code> - si el informe es nulo lanzará excepción</dd>
 </dl>
 </section>
 </li>

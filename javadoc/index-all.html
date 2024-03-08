@@ -11,7 +11,7 @@
 <link rel="stylesheet" type="text/css" href="script-dir/jquery-ui.min.css" title="Style">
 <link rel="stylesheet" type="text/css" href="jquery-ui.overrides.css" title="Style">
 <script type="text/javascript" src="script.js"></script>
-<script type="text/javascript" src="script-dir/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="script-dir/jquery-3.6.1.min.js"></script>
 <script type="text/javascript" src="script-dir/jquery-ui.min.js"></script>
 </head>
 <body class="index-page">
@@ -84,8 +84,12 @@ loadScripts(document, 'script');</script>
 <dl class="index">
 <dt><a href="us/muit/fs/a4i/model/entities/ReportItem.ReportItemBuilder.html#build()" class="member-name-link">build()</a> - Method in class us.muit.fs.a4i.model.entities.<a href="us/muit/fs/a4i/model/entities/ReportItem.ReportItemBuilder.html" title="class in us.muit.fs.a4i.model.entities">ReportItem.ReportItemBuilder</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="us/muit/fs/a4i/model/remote/GitHubRepositoryEnquirer.html#buildReport(java.lang.String)" class="member-name-link">buildReport(String)</a> - Method in class us.muit.fs.a4i.model.remote.<a href="us/muit/fs/a4i/model/remote/GitHubRepositoryEnquirer.html" title="class in us.muit.fs.a4i.model.remote">GitHubRepositoryEnquirer</a></dt>
+<dt><a href="us/muit/fs/a4i/model/remote/GitHubOrganizationEnquirer.html#buildReport(java.lang.String)" class="member-name-link">buildReport(String)</a> - Method in class us.muit.fs.a4i.model.remote.<a href="us/muit/fs/a4i/model/remote/GitHubOrganizationEnquirer.html" title="class in us.muit.fs.a4i.model.remote">GitHubOrganizationEnquirer</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="us/muit/fs/a4i/model/remote/GitHubRepositoryEnquirer.html#buildReport(java.lang.String)" class="member-name-link">buildReport(String)</a> - Method in class us.muit.fs.a4i.model.remote.<a href="us/muit/fs/a4i/model/remote/GitHubRepositoryEnquirer.html" title="class in us.muit.fs.a4i.model.remote">GitHubRepositoryEnquirer</a></dt>
+<dd>
+<div class="block">Devuelve el informe para el repositorio cuyo id se pasa como parámetro</div>
+</dd>
 <dt><a href="us/muit/fs/a4i/model/remote/RemoteEnquirer.html#buildReport(java.lang.String)" class="member-name-link">buildReport(String)</a> - Method in interface us.muit.fs.a4i.model.remote.<a href="us/muit/fs/a4i/model/remote/RemoteEnquirer.html" title="interface in us.muit.fs.a4i.model.remote">RemoteEnquirer</a></dt>
 <dd>
 <div class="block">
@@ -113,6 +117,12 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="us/muit/fs/a4i/control/RepositoryCalculator.html#calcIndicator(java.lang.String,us.muit.fs.a4i.control.ReportManagerI)" class="member-name-link">calcIndicator(String, ReportManagerI)</a> - Method in class us.muit.fs.a4i.control.<a href="us/muit/fs/a4i/control/RepositoryCalculator.html" title="class in us.muit.fs.a4i.control">RepositoryCalculator</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="us/muit/fs/a4i/control/IssuesRatioIndicatorStrategy.html#calcIndicator(java.util.List)" class="member-name-link">calcIndicator(List&lt;ReportItemI&lt;Double&gt;&gt;)</a> - Method in class us.muit.fs.a4i.control.<a href="us/muit/fs/a4i/control/IssuesRatioIndicatorStrategy.html" title="class in us.muit.fs.a4i.control">IssuesRatioIndicatorStrategy</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="us/muit/fs/a4i/control/IndicatorStrategy.html#calcIndicator(java.util.List)" class="member-name-link">calcIndicator(List&lt;ReportItemI&lt;T&gt;&gt;)</a> - Method in interface us.muit.fs.a4i.control.<a href="us/muit/fs/a4i/control/IndicatorStrategy.html" title="interface in us.muit.fs.a4i.control">IndicatorStrategy</a></dt>
+<dd>
+<div class="block">Calcula un indicador a partir de las métricas proporcionadas.</div>
+</dd>
 <dt><a href="us/muit/fs/a4i/config/Checker.html" class="type-name-link" title="class in us.muit.fs.a4i.config">Checker</a> - Class in <a href="us/muit/fs/a4i/config/package-summary.html">us.muit.fs.a4i.config</a></dt>
 <dd>
 <div class="block">Esta clase permite acceder a las interfaces para configurar y verificar métricas e indicadores
@@ -125,6 +135,8 @@ loadScripts(document, 'script');</script>
  Clase para la gestión de los parámetros de contexto</div>
 </dd>
 <dt><a href="us/muit/fs/a4i/model/entities/IndicatorI.IndicatorState.html#CRITICAL" class="member-name-link">CRITICAL</a> - Enum constant in enum class us.muit.fs.a4i.model.entities.<a href="us/muit/fs/a4i/model/entities/IndicatorI.IndicatorState.html" title="enum class in us.muit.fs.a4i.model.entities">IndicatorI.IndicatorState</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="us/muit/fs/a4i/config/IndicatorConfiguration.html#CRITICAL_LIMIT" class="member-name-link">CRITICAL_LIMIT</a> - Variable in class us.muit.fs.a4i.config.<a href="us/muit/fs/a4i/config/IndicatorConfiguration.html" title="class in us.muit.fs.a4i.config">IndicatorConfiguration</a></dt>
 <dd>&nbsp;</dd>
 </dl>
 <h2 class="title" id="I:D">D</h2>
@@ -188,6 +200,8 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="us/muit/fs/a4i/persistence/ExcelReportManager.html#%3Cinit%3E()" class="member-name-link">ExcelReportManager()</a> - Constructor for class us.muit.fs.a4i.persistence.<a href="us/muit/fs/a4i/persistence/ExcelReportManager.html" title="class in us.muit.fs.a4i.persistence">ExcelReportManager</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="us/muit/fs/a4i/persistence/ExcelReportManager.html#%3Cinit%3E(java.lang.String,java.lang.String)" class="member-name-link">ExcelReportManager(String, String)</a> - Constructor for class us.muit.fs.a4i.persistence.<a href="us/muit/fs/a4i/persistence/ExcelReportManager.html" title="class in us.muit.fs.a4i.persistence">ExcelReportManager</a></dt>
+<dd>&nbsp;</dd>
 </dl>
 <h2 class="title" id="I:F">F</h2>
 <dl class="index">
@@ -205,6 +219,24 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">
  Localización del fichero excel</div>
+</dd>
+<dt><a href="us/muit/fs/a4i/model/entities/Font.html" class="type-name-link" title="class in us.muit.fs.a4i.model.entities">Font</a> - Class in <a href="us/muit/fs/a4i/model/entities/package-summary.html">us.muit.fs.a4i.model.entities</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="us/muit/fs/a4i/model/entities/Font.html#%3Cinit%3E()" class="member-name-link">Font()</a> - Constructor for class us.muit.fs.a4i.model.entities.<a href="us/muit/fs/a4i/model/entities/Font.html" title="class in us.muit.fs.a4i.model.entities">Font</a></dt>
+<dd>
+<div class="block">Todos los valores por defecto</div>
+</dd>
+<dt><a href="us/muit/fs/a4i/model/entities/Font.html#%3Cinit%3E(java.lang.String)" class="member-name-link">Font(String)</a> - Constructor for class us.muit.fs.a4i.model.entities.<a href="us/muit/fs/a4i/model/entities/Font.html" title="class in us.muit.fs.a4i.model.entities">Font</a></dt>
+<dd>
+<div class="block">Personalizando el color</div>
+</dd>
+<dt><a href="us/muit/fs/a4i/model/entities/Font.html#%3Cinit%3E(java.lang.String,int,int,java.lang.String)" class="member-name-link">Font(String, int, int, String)</a> - Constructor for class us.muit.fs.a4i.model.entities.<a href="us/muit/fs/a4i/model/entities/Font.html" title="class in us.muit.fs.a4i.model.entities">Font</a></dt>
+<dd>
+<div class="block">Todos los Valores personalizados</div>
+</dd>
+<dt><a href="us/muit/fs/a4i/model/entities/Font.html#%3Cinit%3E(java.lang.String,int,java.lang.String)" class="member-name-link">Font(String, int, String)</a> - Constructor for class us.muit.fs.a4i.model.entities.<a href="us/muit/fs/a4i/model/entities/Font.html" title="class in us.muit.fs.a4i.model.entities">Font</a></dt>
+<dd>
+<div class="block">Todos los Valores personalizados salvo el estilo</div>
 </dd>
 <dt><a href="us/muit/fs/a4i/persistence/ExcelReportManager.html#formater" class="member-name-link">formater</a> - Variable in class us.muit.fs.a4i.persistence.<a href="us/muit/fs/a4i/persistence/ExcelReportManager.html" title="class in us.muit.fs.a4i.persistence">ExcelReportManager</a></dt>
 <dd>
@@ -226,6 +258,8 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Obtiene todas las métricas del informe</div>
 </dd>
+<dt><a href="us/muit/fs/a4i/config/Context.html#getAppConf()" class="member-name-link">getAppConf()</a> - Static method in class us.muit.fs.a4i.config.<a href="us/muit/fs/a4i/config/Context.html" title="class in us.muit.fs.a4i.config">Context</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="us/muit/fs/a4i/config/Context.html#getAppRI()" class="member-name-link">getAppRI()</a> - Static method in class us.muit.fs.a4i.config.<a href="us/muit/fs/a4i/config/Context.html" title="class in us.muit.fs.a4i.config">Context</a></dt>
 <dd>
 <div class="block">
@@ -242,13 +276,13 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="us/muit/fs/a4i/config/Context.html#getChecker()" class="member-name-link">getChecker()</a> - Method in class us.muit.fs.a4i.config.<a href="us/muit/fs/a4i/config/Context.html" title="class in us.muit.fs.a4i.config">Context</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="us/muit/fs/a4i/persistence/ExcelReportManager.html#getCleanSheet()" class="member-name-link">getCleanSheet()</a> - Method in class us.muit.fs.a4i.persistence.<a href="us/muit/fs/a4i/persistence/ExcelReportManager.html" title="class in us.muit.fs.a4i.persistence">ExcelReportManager</a></dt>
+<dt><a href="us/muit/fs/a4i/persistence/ExcelReportManager.html#getCleanSheet(java.lang.String)" class="member-name-link">getCleanSheet(String)</a> - Method in class us.muit.fs.a4i.persistence.<a href="us/muit/fs/a4i/persistence/ExcelReportManager.html" title="class in us.muit.fs.a4i.persistence">ExcelReportManager</a></dt>
 <dd>
 <div class="block">
- El libro contendrán todos los informes de un tipo concreto Primero hay que
- abrir el libro Busco la hoja correspondiente a esta entidad, si ya existe la
- elimino Creo la hoja</div>
+ El libro contendrá todos los informes de un tipo concreto.</div>
 </dd>
+<dt><a href="us/muit/fs/a4i/model/entities/Font.html#getColor()" class="member-name-link">getColor()</a> - Method in class us.muit.fs.a4i.model.entities.<a href="us/muit/fs/a4i/model/entities/Font.html" title="class in us.muit.fs.a4i.model.entities">Font</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="us/muit/fs/a4i/model/remote/GitHubEnquirer.html#getConnection()" class="member-name-link">getConnection()</a> - Method in class us.muit.fs.a4i.model.remote.<a href="us/muit/fs/a4i/model/remote/GitHubEnquirer.html" title="class in us.muit.fs.a4i.model.remote">GitHubEnquirer</a></dt>
 <dd>
 <div class="block">
@@ -271,7 +305,7 @@ loadScripts(document, 'script');</script>
 <dt><a href="us/muit/fs/a4i/config/Context.html#getDefaultFont()" class="member-name-link">getDefaultFont()</a> - Method in class us.muit.fs.a4i.config.<a href="us/muit/fs/a4i/config/Context.html" title="class in us.muit.fs.a4i.config">Context</a></dt>
 <dd>
 <div class="block">
- No Implementado Debería leer las propiedades adecuadas, como color, tamaño,
+ Lee las propiedades adecuadas, como color, tamaño,
  tipo... y construir un objeto Font Si no se ha establecido un valor por
  defecto se crea una fuente simple</div>
 </dd>
@@ -301,6 +335,8 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Obtiene el identificador de la entidad a la que se refiere el informe</div>
 </dd>
+<dt><a href="us/muit/fs/a4i/model/entities/Font.html#getFont()" class="member-name-link">getFont()</a> - Method in class us.muit.fs.a4i.model.entities.<a href="us/muit/fs/a4i/model/entities/Font.html" title="class in us.muit.fs.a4i.model.entities">Font</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="us/muit/fs/a4i/model/entities/ReportItem.html#getIndicator()" class="member-name-link">getIndicator()</a> - Method in class us.muit.fs.a4i.model.entities.<a href="us/muit/fs/a4i/model/entities/ReportItem.html" title="class in us.muit.fs.a4i.model.entities">ReportItem</a></dt>
 <dd>
 <div class="block">Consulta el indicador de ReportItem</div>
@@ -324,10 +360,11 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="us/muit/fs/a4i/config/Checker.html#getIndicatorConfiguration()" class="member-name-link">getIndicatorConfiguration()</a> - Method in class us.muit.fs.a4i.config.<a href="us/muit/fs/a4i/config/Checker.html" title="class in us.muit.fs.a4i.config">Checker</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="us/muit/fs/a4i/config/Context.html#getIndicatorFont(us.muit.fs.a4i.model.entities.IndicatorI.IndicatorState)" class="member-name-link">getIndicatorFont(IndicatorI.IndicatorState)</a> - Static method in class us.muit.fs.a4i.config.<a href="us/muit/fs/a4i/config/Context.html" title="class in us.muit.fs.a4i.config">Context</a></dt>
+<dt><a href="us/muit/fs/a4i/config/Context.html#getIndicatorFont(us.muit.fs.a4i.model.entities.IndicatorI.IndicatorState)" class="member-name-link">getIndicatorFont(IndicatorI.IndicatorState)</a> - Method in class us.muit.fs.a4i.config.<a href="us/muit/fs/a4i/config/Context.html" title="class in us.muit.fs.a4i.config">Context</a></dt>
 <dd>
 <div class="block">
- No Implementado</div>
+ Deberá leer las propiedades adecuadas, como color, tamaño, tipo... y
+ construir un objeto Font para la fuente del indicador en dicho estado</div>
 </dd>
 <dt><a href="us/muit/fs/a4i/persistence/ReportFormater.html#getIndicatorFont(us.muit.fs.a4i.model.entities.IndicatorI.IndicatorState)" class="member-name-link">getIndicatorFont(IndicatorI.IndicatorState)</a> - Method in class us.muit.fs.a4i.persistence.<a href="us/muit/fs/a4i/persistence/ReportFormater.html" title="class in us.muit.fs.a4i.persistence">ReportFormater</a></dt>
 <dd>&nbsp;</dd>
@@ -348,6 +385,8 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="us/muit/fs/a4i/exceptions/MetricException.html#getMessage()" class="member-name-link">getMessage()</a> - Method in exception us.muit.fs.a4i.exceptions.<a href="us/muit/fs/a4i/exceptions/MetricException.html" title="class in us.muit.fs.a4i.exceptions">MetricException</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="us/muit/fs/a4i/exceptions/NotAvailableMetricException.html#getMessage()" class="member-name-link">getMessage()</a> - Method in exception us.muit.fs.a4i.exceptions.<a href="us/muit/fs/a4i/exceptions/NotAvailableMetricException.html" title="class in us.muit.fs.a4i.exceptions">NotAvailableMetricException</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="us/muit/fs/a4i/exceptions/ReportItemException.html#getMessage()" class="member-name-link">getMessage()</a> - Method in exception us.muit.fs.a4i.exceptions.<a href="us/muit/fs/a4i/exceptions/ReportItemException.html" title="class in us.muit.fs.a4i.exceptions">ReportItemException</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="us/muit/fs/a4i/exceptions/ReportNotDefinedException.html#getMessage()" class="member-name-link">getMessage()</a> - Method in exception us.muit.fs.a4i.exceptions.<a href="us/muit/fs/a4i/exceptions/ReportNotDefinedException.html" title="class in us.muit.fs.a4i.exceptions">ReportNotDefinedException</a></dt>
@@ -356,9 +395,13 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="us/muit/fs/a4i/control/ReportManagerI.html#getMetric(java.lang.String)" class="member-name-link">getMetric(String)</a> - Method in interface us.muit.fs.a4i.control.<a href="us/muit/fs/a4i/control/ReportManagerI.html" title="interface in us.muit.fs.a4i.control">ReportManagerI</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="us/muit/fs/a4i/model/remote/GitHubOrganizationEnquirer.html#getMetric(java.lang.String,java.lang.String)" class="member-name-link">getMetric(String, String)</a> - Method in class us.muit.fs.a4i.model.remote.<a href="us/muit/fs/a4i/model/remote/GitHubOrganizationEnquirer.html" title="class in us.muit.fs.a4i.model.remote">GitHubOrganizationEnquirer</a></dt>
+<dd>
+<div class="block">Permite consultar desde fuera una única métrica de la organización con el id que se pase como parámetro</div>
+</dd>
 <dt><a href="us/muit/fs/a4i/model/remote/GitHubRepositoryEnquirer.html#getMetric(java.lang.String,java.lang.String)" class="member-name-link">getMetric(String, String)</a> - Method in class us.muit.fs.a4i.model.remote.<a href="us/muit/fs/a4i/model/remote/GitHubRepositoryEnquirer.html" title="class in us.muit.fs.a4i.model.remote">GitHubRepositoryEnquirer</a></dt>
 <dd>
-<div class="block">Permite consultar desde fuera una métrica del repositorio indicado</div>
+<div class="block">Permite consultar desde fuera una única métrica del repositorio indicado</div>
 </dd>
 <dt><a href="us/muit/fs/a4i/model/remote/RemoteEnquirer.html#getMetric(java.lang.String,java.lang.String)" class="member-name-link">getMetric(String, String)</a> - Method in interface us.muit.fs.a4i.model.remote.<a href="us/muit/fs/a4i/model/remote/RemoteEnquirer.html" title="interface in us.muit.fs.a4i.model.remote">RemoteEnquirer</a></dt>
 <dd>
@@ -376,10 +419,11 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="us/muit/fs/a4i/config/Checker.html#getMetricConfiguration()" class="member-name-link">getMetricConfiguration()</a> - Method in class us.muit.fs.a4i.config.<a href="us/muit/fs/a4i/config/Checker.html" title="class in us.muit.fs.a4i.config">Checker</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="us/muit/fs/a4i/config/Context.html#getMetricFont()" class="member-name-link">getMetricFont()</a> - Static method in class us.muit.fs.a4i.config.<a href="us/muit/fs/a4i/config/Context.html" title="class in us.muit.fs.a4i.config">Context</a></dt>
+<dt><a href="us/muit/fs/a4i/config/Context.html#getMetricFont()" class="member-name-link">getMetricFont()</a> - Method in class us.muit.fs.a4i.config.<a href="us/muit/fs/a4i/config/Context.html" title="class in us.muit.fs.a4i.config">Context</a></dt>
 <dd>
 <div class="block">
- No Implementado</div>
+ Lee las propiedades adecuadas, como color, tamaño, tipo... y
+ construye un objeto Font para la fuente de las métricas</div>
 </dd>
 <dt><a href="us/muit/fs/a4i/persistence/ReportFormater.html#getMetricFont()" class="member-name-link">getMetricFont()</a> - Method in class us.muit.fs.a4i.persistence.<a href="us/muit/fs/a4i/persistence/ReportFormater.html" title="class in us.muit.fs.a4i.persistence">ReportFormater</a></dt>
 <dd>&nbsp;</dd>
@@ -482,6 +526,13 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="us/muit/fs/a4i/model/remote/GitHubEnquirer.html#%3Cinit%3E()" class="member-name-link">GitHubEnquirer()</a> - Constructor for class us.muit.fs.a4i.model.remote.<a href="us/muit/fs/a4i/model/remote/GitHubEnquirer.html" title="class in us.muit.fs.a4i.model.remote">GitHubEnquirer</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="us/muit/fs/a4i/model/remote/GitHubOrganizationEnquirer.html" class="type-name-link" title="class in us.muit.fs.a4i.model.remote">GitHubOrganizationEnquirer</a> - Class in <a href="us/muit/fs/a4i/model/remote/package-summary.html">us.muit.fs.a4i.model.remote</a></dt>
+<dd>
+<div class="block">
+ Esta clase permite consultar métricas sobre una organización GitHub</div>
+</dd>
+<dt><a href="us/muit/fs/a4i/model/remote/GitHubOrganizationEnquirer.html#%3Cinit%3E()" class="member-name-link">GitHubOrganizationEnquirer()</a> - Constructor for class us.muit.fs.a4i.model.remote.<a href="us/muit/fs/a4i/model/remote/GitHubOrganizationEnquirer.html" title="class in us.muit.fs.a4i.model.remote">GitHubOrganizationEnquirer</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="us/muit/fs/a4i/model/remote/GitHubRepositoryEnquirer.html" class="type-name-link" title="class in us.muit.fs.a4i.model.remote">GitHubRepositoryEnquirer</a> - Class in <a href="us/muit/fs/a4i/model/remote/package-summary.html">us.muit.fs.a4i.model.remote</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="us/muit/fs/a4i/model/remote/GitHubRepositoryEnquirer.html#%3Cinit%3E()" class="member-name-link">GitHubRepositoryEnquirer()</a> - Constructor for class us.muit.fs.a4i.model.remote.<a href="us/muit/fs/a4i/model/remote/GitHubRepositoryEnquirer.html" title="class in us.muit.fs.a4i.model.remote">GitHubRepositoryEnquirer</a></dt>
@@ -531,6 +582,14 @@ loadScripts(document, 'script');</script>
 <div class="block">
  Define los métodos para calcular cada indicador y añadirlo al informe</div>
 </dd>
+<dt><a href="us/muit/fs/a4i/control/IndicatorStrategy.html" class="type-name-link" title="interface in us.muit.fs.a4i.control">IndicatorStrategy</a>&lt;<a href="us/muit/fs/a4i/control/IndicatorStrategy.html" title="type parameter in IndicatorStrategy">T</a>&gt; - Interface in <a href="us/muit/fs/a4i/control/package-summary.html">us.muit.fs.a4i.control</a></dt>
+<dd>
+<div class="block">/**</div>
+</dd>
+<dt><a href="us/muit/fs/a4i/control/IssuesRatioIndicatorStrategy.html" class="type-name-link" title="class in us.muit.fs.a4i.control">IssuesRatioIndicatorStrategy</a> - Class in <a href="us/muit/fs/a4i/control/package-summary.html">us.muit.fs.a4i.control</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="us/muit/fs/a4i/control/IssuesRatioIndicatorStrategy.html#%3Cinit%3E()" class="member-name-link">IssuesRatioIndicatorStrategy()</a> - Constructor for class us.muit.fs.a4i.control.<a href="us/muit/fs/a4i/control/IssuesRatioIndicatorStrategy.html" title="class in us.muit.fs.a4i.control">IssuesRatioIndicatorStrategy</a></dt>
+<dd>&nbsp;</dd>
 </dl>
 <h2 class="title" id="I:L">L</h2>
 <dl class="index">
@@ -576,10 +635,19 @@ loadScripts(document, 'script');</script>
  Crea un informe para la entidad indicada como parámetro, según las reglas del
  RemoteBuilder Establecido</div>
 </dd>
+<dt><a href="us/muit/fs/a4i/exceptions/NotAvailableMetricException.html" class="type-name-link" title="class in us.muit.fs.a4i.exceptions">NotAvailableMetricException</a> - Exception in <a href="us/muit/fs/a4i/exceptions/package-summary.html">us.muit.fs.a4i.exceptions</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="us/muit/fs/a4i/exceptions/NotAvailableMetricException.html#%3Cinit%3E(java.lang.String)" class="member-name-link">NotAvailableMetricException(String)</a> - Constructor for exception us.muit.fs.a4i.exceptions.<a href="us/muit/fs/a4i/exceptions/NotAvailableMetricException.html" title="class in us.muit.fs.a4i.exceptions">NotAvailableMetricException</a></dt>
+<dd>
+<div class="block">
+ Constructor</div>
+</dd>
 </dl>
 <h2 class="title" id="I:O">O</h2>
 <dl class="index">
 <dt><a href="us/muit/fs/a4i/model/entities/IndicatorI.IndicatorState.html#OK" class="member-name-link">OK</a> - Enum constant in enum class us.muit.fs.a4i.model.entities.<a href="us/muit/fs/a4i/model/entities/IndicatorI.IndicatorState.html" title="enum class in us.muit.fs.a4i.model.entities">IndicatorI.IndicatorState</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="us/muit/fs/a4i/config/IndicatorConfiguration.html#OK_LIMIT" class="member-name-link">OK_LIMIT</a> - Variable in class us.muit.fs.a4i.config.<a href="us/muit/fs/a4i/config/IndicatorConfiguration.html" title="class in us.muit.fs.a4i.config">IndicatorConfiguration</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="us/muit/fs/a4i/model/entities/ReportI.ReportType.html#ORGANIZATION" class="member-name-link">ORGANIZATION</a> - Enum constant in enum class us.muit.fs.a4i.model.entities.<a href="us/muit/fs/a4i/model/entities/ReportI.ReportType.html" title="enum class in us.muit.fs.a4i.model.entities">ReportI.ReportType</a></dt>
 <dd>&nbsp;</dd>
@@ -622,8 +690,6 @@ loadScripts(document, 'script');</script>
 <dt><a href="us/muit/fs/a4i/persistence/ReportFormater.html" class="type-name-link" title="class in us.muit.fs.a4i.persistence">ReportFormater</a> - Class in <a href="us/muit/fs/a4i/persistence/package-summary.html">us.muit.fs.a4i.persistence</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="us/muit/fs/a4i/persistence/ReportFormater.html#%3Cinit%3E()" class="member-name-link">ReportFormater()</a> - Constructor for class us.muit.fs.a4i.persistence.<a href="us/muit/fs/a4i/persistence/ReportFormater.html" title="class in us.muit.fs.a4i.persistence">ReportFormater</a></dt>
-<dd>&nbsp;</dd>
-<dt><a href="us/muit/fs/a4i/control/ReportFormaterI.html" class="type-name-link" title="interface in us.muit.fs.a4i.control">ReportFormaterI</a> - Interface in <a href="us/muit/fs/a4i/control/package-summary.html">us.muit.fs.a4i.control</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="us/muit/fs/a4i/persistence/ReportFormaterI.html" class="type-name-link" title="interface in us.muit.fs.a4i.persistence">ReportFormaterI</a> - Interface in <a href="us/muit/fs/a4i/persistence/package-summary.html">us.muit.fs.a4i.persistence</a></dt>
 <dd>
@@ -682,6 +748,12 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="us/muit/fs/a4i/control/RepositoryCalculator.html#%3Cinit%3E()" class="member-name-link">RepositoryCalculator()</a> - Constructor for class us.muit.fs.a4i.control.<a href="us/muit/fs/a4i/control/RepositoryCalculator.html" title="class in us.muit.fs.a4i.control">RepositoryCalculator</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="us/muit/fs/a4i/control/IndicatorStrategy.html#requiredMetrics()" class="member-name-link">requiredMetrics()</a> - Method in interface us.muit.fs.a4i.control.<a href="us/muit/fs/a4i/control/IndicatorStrategy.html" title="interface in us.muit.fs.a4i.control">IndicatorStrategy</a></dt>
+<dd>
+<div class="block">Obtiene las métricas necesarias</div>
+</dd>
+<dt><a href="us/muit/fs/a4i/control/IssuesRatioIndicatorStrategy.html#requiredMetrics()" class="member-name-link">requiredMetrics()</a> - Method in class us.muit.fs.a4i.control.<a href="us/muit/fs/a4i/control/IssuesRatioIndicatorStrategy.html" title="class in us.muit.fs.a4i.control">IssuesRatioIndicatorStrategy</a></dt>
+<dd>&nbsp;</dd>
 </dl>
 <h2 class="title" id="I:S">S</h2>
 <dl class="index">
@@ -697,8 +769,9 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="us/muit/fs/a4i/persistence/ExcelReportManager.html#saveReport(us.muit.fs.a4i.model.entities.ReportI)" class="member-name-link">saveReport(ReportI)</a> - Method in class us.muit.fs.a4i.persistence.<a href="us/muit/fs/a4i/persistence/ExcelReportManager.html" title="class in us.muit.fs.a4i.persistence">ExcelReportManager</a></dt>
 <dd>
-<div class="block">Guarda en un hoja limpia con el nombre del id del informe todas las métricas
- y los indicadores que incluya</div>
+<div class="block">Un informe será una hoja en el libro excel Guarda en un hoja limpia con el
+ nombre del id del informe Incluye todas las métricas y los indicadores que
+ tenga report</div>
 </dd>
 <dt><a href="us/muit/fs/a4i/persistence/PersistenceManager.html#saveReport(us.muit.fs.a4i.model.entities.ReportI)" class="member-name-link">saveReport(ReportI)</a> - Method in interface us.muit.fs.a4i.persistence.<a href="us/muit/fs/a4i/persistence/PersistenceManager.html" title="interface in us.muit.fs.a4i.persistence">PersistenceManager</a></dt>
 <dd>
@@ -716,9 +789,9 @@ loadScripts(document, 'script');</script>
  Establece la ruta del fichero de métricas e indicadores indicado por el
  cliente/aplicación</div>
 </dd>
-<dt><a href="us/muit/fs/a4i/persistence/ReportFormater.html#setDefaultFont(java.awt.Font)" class="member-name-link">setDefaultFont(Font)</a> - Method in class us.muit.fs.a4i.persistence.<a href="us/muit/fs/a4i/persistence/ReportFormater.html" title="class in us.muit.fs.a4i.persistence">ReportFormater</a></dt>
+<dt><a href="us/muit/fs/a4i/persistence/ReportFormater.html#setDefaultFont(us.muit.fs.a4i.model.entities.Font)" class="member-name-link">setDefaultFont(Font)</a> - Method in class us.muit.fs.a4i.persistence.<a href="us/muit/fs/a4i/persistence/ReportFormater.html" title="class in us.muit.fs.a4i.persistence">ReportFormater</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="us/muit/fs/a4i/persistence/ReportFormaterI.html#setDefaultFont(java.awt.Font)" class="member-name-link">setDefaultFont(Font)</a> - Method in interface us.muit.fs.a4i.persistence.<a href="us/muit/fs/a4i/persistence/ReportFormaterI.html" title="interface in us.muit.fs.a4i.persistence">ReportFormaterI</a></dt>
+<dt><a href="us/muit/fs/a4i/persistence/ReportFormaterI.html#setDefaultFont(us.muit.fs.a4i.model.entities.Font)" class="member-name-link">setDefaultFont(Font)</a> - Method in interface us.muit.fs.a4i.persistence.<a href="us/muit/fs/a4i/persistence/ReportFormaterI.html" title="interface in us.muit.fs.a4i.persistence">ReportFormaterI</a></dt>
 <dd>
 <div class="block">
  Establece la fuente por defecto para los indicadores y m�tricas</div>
@@ -737,20 +810,24 @@ loadScripts(document, 'script');</script>
 <div class="block">
  Establece el elemento que establece el formato</div>
 </dd>
+<dt><a href="us/muit/fs/a4i/control/IndicatorsCalculator.html#setIndicator(java.lang.String,us.muit.fs.a4i.control.IndicatorStrategy)" class="member-name-link">setIndicator(String, IndicatorStrategy)</a> - Method in interface us.muit.fs.a4i.control.<a href="us/muit/fs/a4i/control/IndicatorsCalculator.html" title="interface in us.muit.fs.a4i.control">IndicatorsCalculator</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="us/muit/fs/a4i/control/RepositoryCalculator.html#setIndicator(java.lang.String,us.muit.fs.a4i.control.IndicatorStrategy)" class="member-name-link">setIndicator(String, IndicatorStrategy)</a> - Method in class us.muit.fs.a4i.control.<a href="us/muit/fs/a4i/control/RepositoryCalculator.html" title="class in us.muit.fs.a4i.control">RepositoryCalculator</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="us/muit/fs/a4i/control/ReportManager.html#setIndicatorCalc(us.muit.fs.a4i.control.IndicatorsCalculator)" class="member-name-link">setIndicatorCalc(IndicatorsCalculator)</a> - Method in class us.muit.fs.a4i.control.<a href="us/muit/fs/a4i/control/ReportManager.html" title="class in us.muit.fs.a4i.control">ReportManager</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="us/muit/fs/a4i/persistence/ReportFormater.html#setIndicatorFont(us.muit.fs.a4i.model.entities.IndicatorI.IndicatorState,java.awt.Font)" class="member-name-link">setIndicatorFont(IndicatorI.IndicatorState, Font)</a> - Method in class us.muit.fs.a4i.persistence.<a href="us/muit/fs/a4i/persistence/ReportFormater.html" title="class in us.muit.fs.a4i.persistence">ReportFormater</a></dt>
+<dt><a href="us/muit/fs/a4i/persistence/ReportFormater.html#setIndicatorFont(us.muit.fs.a4i.model.entities.IndicatorI.IndicatorState,us.muit.fs.a4i.model.entities.Font)" class="member-name-link">setIndicatorFont(IndicatorI.IndicatorState, Font)</a> - Method in class us.muit.fs.a4i.persistence.<a href="us/muit/fs/a4i/persistence/ReportFormater.html" title="class in us.muit.fs.a4i.persistence">ReportFormater</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="us/muit/fs/a4i/persistence/ReportFormaterI.html#setIndicatorFont(us.muit.fs.a4i.model.entities.IndicatorI.IndicatorState,java.awt.Font)" class="member-name-link">setIndicatorFont(IndicatorI.IndicatorState, Font)</a> - Method in interface us.muit.fs.a4i.persistence.<a href="us/muit/fs/a4i/persistence/ReportFormaterI.html" title="interface in us.muit.fs.a4i.persistence">ReportFormaterI</a></dt>
+<dt><a href="us/muit/fs/a4i/persistence/ReportFormaterI.html#setIndicatorFont(us.muit.fs.a4i.model.entities.IndicatorI.IndicatorState,us.muit.fs.a4i.model.entities.Font)" class="member-name-link">setIndicatorFont(IndicatorI.IndicatorState, Font)</a> - Method in interface us.muit.fs.a4i.persistence.<a href="us/muit/fs/a4i/persistence/ReportFormaterI.html" title="interface in us.muit.fs.a4i.persistence">ReportFormaterI</a></dt>
 <dd>
 <div class="block">
  Establece la fuente para un indicador en un estado determinado</div>
 </dd>
 <dt><a href="us/muit/fs/a4i/model/remote/GitHubEnquirer.html#setMetric(java.lang.String)" class="member-name-link">setMetric(String)</a> - Method in class us.muit.fs.a4i.model.remote.<a href="us/muit/fs/a4i/model/remote/GitHubEnquirer.html" title="class in us.muit.fs.a4i.model.remote">GitHubEnquirer</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="us/muit/fs/a4i/persistence/ReportFormater.html#setMetricFont(java.awt.Font)" class="member-name-link">setMetricFont(Font)</a> - Method in class us.muit.fs.a4i.persistence.<a href="us/muit/fs/a4i/persistence/ReportFormater.html" title="class in us.muit.fs.a4i.persistence">ReportFormater</a></dt>
+<dt><a href="us/muit/fs/a4i/persistence/ReportFormater.html#setMetricFont(us.muit.fs.a4i.model.entities.Font)" class="member-name-link">setMetricFont(Font)</a> - Method in class us.muit.fs.a4i.persistence.<a href="us/muit/fs/a4i/persistence/ReportFormater.html" title="class in us.muit.fs.a4i.persistence">ReportFormater</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="us/muit/fs/a4i/persistence/ReportFormaterI.html#setMetricFont(java.awt.Font)" class="member-name-link">setMetricFont(Font)</a> - Method in interface us.muit.fs.a4i.persistence.<a href="us/muit/fs/a4i/persistence/ReportFormaterI.html" title="interface in us.muit.fs.a4i.persistence">ReportFormaterI</a></dt>
+<dt><a href="us/muit/fs/a4i/persistence/ReportFormaterI.html#setMetricFont(us.muit.fs.a4i.model.entities.Font)" class="member-name-link">setMetricFont(Font)</a> - Method in interface us.muit.fs.a4i.persistence.<a href="us/muit/fs/a4i/persistence/ReportFormaterI.html" title="interface in us.muit.fs.a4i.persistence">ReportFormaterI</a></dt>
 <dd>
 <div class="block">
  Establece la fuente para las métricas</div>
@@ -783,8 +860,6 @@ loadScripts(document, 'script');</script>
  Establece el objeto que se usará para consultar al servidor remoto y obtener
  las métricas</div>
 </dd>
-<dt><a href="us/muit/fs/a4i/persistence/ExcelReportManager.html#setReport(us.muit.fs.a4i.model.entities.ReportI)" class="member-name-link">setReport(ReportI)</a> - Method in class us.muit.fs.a4i.persistence.<a href="us/muit/fs/a4i/persistence/ExcelReportManager.html" title="class in us.muit.fs.a4i.persistence">ExcelReportManager</a></dt>
-<dd>&nbsp;</dd>
 <dt><a href="us/muit/fs/a4i/model/entities/Indicator.html#setState(us.muit.fs.a4i.model.entities.IndicatorI.IndicatorState)" class="member-name-link">setState(IndicatorI.IndicatorState)</a> - Method in class us.muit.fs.a4i.model.entities.<a href="us/muit/fs/a4i/model/entities/Indicator.html" title="class in us.muit.fs.a4i.model.entities">Indicator</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="us/muit/fs/a4i/model/entities/IndicatorI.html#setState(us.muit.fs.a4i.model.entities.IndicatorI.IndicatorState)" class="member-name-link">setState(IndicatorI.IndicatorState)</a> - Method in interface us.muit.fs.a4i.model.entities.<a href="us/muit/fs/a4i/model/entities/IndicatorI.html" title="interface in us.muit.fs.a4i.model.entities">IndicatorI</a></dt>
@@ -827,7 +902,8 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="us/muit/fs/a4i/control/package-summary.html">us.muit.fs.a4i.control</a> - package us.muit.fs.a4i.control</dt>
 <dd>
-<div class="block">Clases e interfaces controladoras</div>
+<div class="block">
+ Clases e interfaces controladoras</div>
 </dd>
 <dt><a href="us/muit/fs/a4i/exceptions/package-summary.html">us.muit.fs.a4i.exceptions</a> - package us.muit.fs.a4i.exceptions</dt>
 <dd>
@@ -848,7 +924,8 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="us/muit/fs/a4i/persistence/package-summary.html">us.muit.fs.a4i.persistence</a> - package us.muit.fs.a4i.persistence</dt>
 <dd>
-<div class="block">Este paquete contiene las clases que facilitan el acceso a los datos
+<div class="block">
+ Este paquete contiene las clases que facilitan el acceso a los datos
  persistentes</div>
 </dd>
 </dl>
@@ -894,6 +971,8 @@ the order they are declared.</div>
 <h2 class="title" id="I:W">W</h2>
 <dl class="index">
 <dt><a href="us/muit/fs/a4i/model/entities/IndicatorI.IndicatorState.html#WARNING" class="member-name-link">WARNING</a> - Enum constant in enum class us.muit.fs.a4i.model.entities.<a href="us/muit/fs/a4i/model/entities/IndicatorI.IndicatorState.html" title="enum class in us.muit.fs.a4i.model.entities">IndicatorI.IndicatorState</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="us/muit/fs/a4i/config/IndicatorConfiguration.html#WARNING_LIMIT" class="member-name-link">WARNING_LIMIT</a> - Variable in class us.muit.fs.a4i.config.<a href="us/muit/fs/a4i/config/IndicatorConfiguration.html" title="class in us.muit.fs.a4i.config">IndicatorConfiguration</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="us/muit/fs/a4i/persistence/ExcelReportManager.html#wb" class="member-name-link">wb</a> - Variable in class us.muit.fs.a4i.persistence.<a href="us/muit/fs/a4i/persistence/ExcelReportManager.html" title="class in us.muit.fs.a4i.persistence">ExcelReportManager</a></dt>
 <dd>&nbsp;</dd>

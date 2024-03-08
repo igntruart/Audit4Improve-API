@@ -11,7 +11,7 @@
 <link rel="stylesheet" type="text/css" href="../../../../../../script-dir/jquery-ui.min.css" title="Style">
 <link rel="stylesheet" type="text/css" href="../../../../../../jquery-ui.overrides.css" title="Style">
 <script type="text/javascript" src="../../../../../../script.js"></script>
-<script type="text/javascript" src="../../../../../../script-dir/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="../../../../../../script-dir/jquery-3.6.1.min.js"></script>
 <script type="text/javascript" src="../../../../../../script-dir/jquery-ui.min.js"></script>
 </head>
 <body class="class-declaration-page">
@@ -86,7 +86,8 @@ loadScripts(document, 'script');</script>
 <span class="extends-implements">extends <a href="GitHubEnquirer.html" title="class in us.muit.fs.a4i.model.remote">GitHubEnquirer</a></span></div>
 <dl class="notes">
 <dt>Author:</dt>
-<dd>Isabel Román</dd>
+<dd>Isabel Román
+ Deuda técnica: debería seguir la misma filosofía que GitHubOrganizationEnquirer para evitar la replicación de código</dd>
 </dl>
 </section>
 <section class="summary">
@@ -139,14 +140,13 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../entities/ReportI.html" title="interface in us.muit.fs.a4i.model.entities">ReportI</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#buildReport(java.lang.String)" class="member-name-link">buildReport</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;repositoryId)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">
- Construye el informe sobre la entidad indicada con las métricas por defecto</div>
+<div class="block">Devuelve el informe para el repositorio cuyo id se pasa como parámetro</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../entities/ReportItem.html" title="class in us.muit.fs.a4i.model.entities">ReportItem</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMetric(java.lang.String,java.lang.String)" class="member-name-link">getMetric</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;metricName,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;repositoryId)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Permite consultar desde fuera una métrica del repositorio indicado</div>
+<div class="block">Permite consultar desde fuera una única métrica del repositorio indicado</div>
 </div>
 </div>
 </div>
@@ -189,10 +189,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="buildReport(java.lang.String)">
 <h3>buildReport</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../entities/ReportI.html" title="interface in us.muit.fs.a4i.model.entities">ReportI</a></span>&nbsp;<span class="element-name">buildReport</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;repositoryId)</span></div>
-<div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="RemoteEnquirer.html#buildReport(java.lang.String)">RemoteEnquirer</a></code></span></div>
-<div class="block"><p>
- Construye el informe sobre la entidad indicada con las métricas por defecto
- </p></div>
+<div class="block">Devuelve el informe para el repositorio cuyo id se pasa como parámetro</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>repositoryId</code> - Identificador unívoco en el remoto de la entidad sobre la que
@@ -208,14 +205,13 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../entities/ReportItem.html" title="class in us.muit.fs.a4i.model.entities">ReportItem</a></span>&nbsp;<span class="element-name">getMetric</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;metricName,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;repositoryId)</span>
                      throws <span class="exceptions"><a href="../../exceptions/MetricException.html" title="class in us.muit.fs.a4i.exceptions">MetricException</a></span></div>
-<div class="block">Permite consultar desde fuera una métrica del repositorio indicado</div>
+<div class="block">Permite consultar desde fuera una única métrica del repositorio indicado</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>metricName</code> - métrica solicitada</dd>
-<dd><code>repositoryId</code> - Identificador unívoco en el remoto de la entidad sobre la
-                   que se consulta</dd>
+<dd><code>metricName</code> - el nombre de la métrica</dd>
+<dd><code>repositoryId</code> - el id del repositorio</dd>
 <dt>Returns:</dt>
-<dd>La nueva métrica construida tras la consulta al remoto</dd>
+<dd>el item para incluir en el informe del repositorio</dd>
 <dt>Throws:</dt>
 <dd><code><a href="../../exceptions/MetricException.html" title="class in us.muit.fs.a4i.exceptions">MetricException</a></code> - Si la métrica no esta definida</dd>
 </dl>
